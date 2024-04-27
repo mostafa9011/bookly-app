@@ -1,9 +1,9 @@
 abstract class Failure {
   String message;
-  String statusCode;
+  String? statusCode;
 
   Failure({
     required this.message,
-    required this.statusCode,
+    this.statusCode,
   });
 }

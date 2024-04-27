@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xff100B20);
-const kTranstionDuration = Duration(milliseconds: 250);
-const kGtSectraFine = 'GT Sectra Fine';
+abstract class Constants {
+  static const primaryColor = Color(0xff100B20);
+  static const transtionDuration = Duration(milliseconds: 250);
+  static const gtSectraFineFont = 'GT Sectra Fine';
+
+  static const String baseUrl = 'https://www.googleapis.com/books/v1/';
+  static const String featuredBooksEndPiont =
+      'volumes?Filtering=free-ebooks&q=subject:programming';
+      
+}
