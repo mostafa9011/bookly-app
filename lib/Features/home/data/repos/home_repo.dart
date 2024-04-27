@@ -5,6 +5,6 @@ import 'package:bookly/core/errors/failure.dart';
 import 'package:either_dart/either.dart';
 
 abstract class HomeRepo {
-  Future<Either<Failure, List<BookModel>>> fetchBestSalureBooks();
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks();
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
 }
