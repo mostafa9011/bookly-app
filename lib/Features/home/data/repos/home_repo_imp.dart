@@ -1,9 +1,7 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bookly/core/constants.dart';
 import 'package:bookly/core/errors/server_failure.dart';
 import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
-
 import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/Features/home/data/repos/home_repo.dart';
 import 'package:bookly/core/errors/failure.dart';
