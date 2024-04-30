@@ -31,7 +31,7 @@ class Bookly extends StatelessWidget {
           create: (context) {
             return NewestBooksCubit(
               getIt.get<HomeRepoImp>(),
-            );
+            )..fetchNewestBooks();
           },
         ),
       ],
