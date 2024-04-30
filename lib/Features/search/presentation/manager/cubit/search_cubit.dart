@@ -16,9 +16,13 @@ class SearchCubit extends Cubit<SearchState> {
         SearchFailure(fail.message),
       );
     }, (data) {
-      emit(
-        SearchSuccess(data),
-      );
+      if (data.isEmpty) {
+        emit(SearchInitial());
+      } else {
+        emit(
+          SearchSuccess(data),
+        );
+      }
     });
   }
 }

@@ -21,7 +21,11 @@ class SearchRepoImp implements SearchRepo {
         endPoint: 'volumes?Filtering=free-ebooks&q=subject:$title',
       );
 
+      if (data['items'] == null) {
+        return Left(ServerFailure(message: 'No Result'));
+      }
       List<dynamic> itemList = data['items'];
+      // int totalItems = data['totalItems'];
       for (var element in itemList) {
         booksList.add(
           BookModel.fromJson(element),
