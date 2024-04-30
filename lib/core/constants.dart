@@ -9,5 +9,5 @@ abstract class Constants {
   static const String featuredBooksEndPiont =
       'volumes?Filtering=free-ebooks&q=subject:programming';
   static const String newestBooksEndPiont =
-      'volumes?Filtering=free-ebooks&q=subject:programming&Sorting=newest';
+      'volumes?Filtering=free-ebooks&q=computer scince&Sorting=newest';
 }
