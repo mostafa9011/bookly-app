@@ -1,6 +1,6 @@
 {
-    "name": "bookly",
-    "short_name": "bookly",
+    "name": "bookly_app2",
+    "short_name": "bookly_app2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
