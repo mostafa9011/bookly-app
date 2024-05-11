@@ -1,6 +1,7 @@
 import 'package:bookly/Features/home/data/data_sources/remote_data_source/home_remote_data_source.dart';
 import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
 import 'package:bookly/core/utils/api_service.dart';
+import 'package:hive/hive.dart';
 
 import '../../../../../core/constants.dart';
 import '../../models/book_model/book_model.dart';
@@ -23,6 +24,8 @@ class HomeRemoteDateSourceImpe extends HomeRemoteDateSource {
         BookModel2.fromJson(element),
       );
     }
+    var fBox = Hive.box<BookEntity>(Constants.featuredBox);
+    fBox.addAll(booksList);
     return booksList;
   }
 
@@ -39,6 +42,8 @@ class HomeRemoteDateSourceImpe extends HomeRemoteDateSource {
         BookModel2.fromJson(element),
       );
     }
+    var nBox = Hive.box<BookEntity>(Constants.newestBox);
+    nBox.addAll(booksList);
     return booksList;
   }
 }
