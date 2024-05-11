@@ -61,18 +61,4 @@ class BookModel2 extends BookEntity {
         'accessInfo': accessInfo?.toJson(),
         'searchInfo': searchInfo?.toJson(),
       };
-
-  @override
-  List<Object?> get props {
-    return [
-      kind,
-      id,
-      etag,
-      selfLink,
-      volumeInfo,
-      saleInfo,
-      accessInfo,
-      searchInfo,
-    ];
-  }
 }
