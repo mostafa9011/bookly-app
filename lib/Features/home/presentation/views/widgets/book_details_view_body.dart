@@ -7,7 +7,7 @@ import 'custom_book_details_app_bar.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key, required this.bookModel});
-  final BookModel2 bookModel;
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {

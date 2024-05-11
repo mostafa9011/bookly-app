@@ -21,7 +21,7 @@ class HomeRemoteDateSourceImpe extends HomeRemoteDateSource {
     List<BookEntity> booksList = [];
     for (var element in itemList) {
       booksList.add(
-        BookModel2.fromJson(element),
+        BookModel.fromJson(element),
       );
     }
     var fBox = Hive.box<BookEntity>(Constants.featuredBox);
@@ -39,7 +39,7 @@ class HomeRemoteDateSourceImpe extends HomeRemoteDateSource {
     List<BookEntity> booksList = [];
     for (var element in itemList) {
       booksList.add(
-        BookModel2.fromJson(element),
+        BookModel.fromJson(element),
       );
     }
     var nBox = Hive.box<BookEntity>(Constants.newestBox);

@@ -18,7 +18,7 @@ class NewestBooksFailure extends NewestBooksState {
 }
 
 class NewestBooksSuccess extends NewestBooksState {
-  final List<BookModel2> booksList;
+  final List<BookModel> booksList;
 
   const NewestBooksSuccess(this.booksList);
 }

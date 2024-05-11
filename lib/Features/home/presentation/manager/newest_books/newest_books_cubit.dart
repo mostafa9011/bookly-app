@@ -16,9 +16,9 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
         NewestBooksFailure(failure.message),
       );
     }, (books) {
-      emit(
-        NewestBooksSuccess(books),
-      );
+      // emit(
+      //   NewestBooksSuccess(books),
+      // );
     });
   }
 }

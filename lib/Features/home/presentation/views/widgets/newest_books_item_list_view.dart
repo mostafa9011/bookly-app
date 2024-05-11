@@ -12,7 +12,7 @@ class BookListViewItem extends StatelessWidget {
     super.key,
     required this.bookModel,
   });
-  final BookModel2 bookModel;
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {

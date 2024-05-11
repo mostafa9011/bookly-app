@@ -18,7 +18,7 @@ class SimilarBooksFailure extends SimilarBooksState {
 }
 
 class SimilarBooksSuccess extends SimilarBooksState {
-  final List<BookModel2> books;
+  final List<BookModel> books;
 
   const SimilarBooksSuccess(this.books);
 }

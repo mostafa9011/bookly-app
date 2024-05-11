@@ -15,9 +15,9 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
         FeaturedBooksFailure(failure.message),
       );
     }, (books) {
-      emit(
-        FeaturedBooksSuccess(books),
-      );
+      // emit(
+      //   FeaturedBooksSuccess(books),
+      // );
     });
   }
 }
