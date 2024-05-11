@@ -1,4 +1,6 @@
-class BookEntity {
+import 'package:equatable/equatable.dart';
+
+abstract class BookEntity extends Equatable {
   final String bookId;
   final String image;
   final String title;

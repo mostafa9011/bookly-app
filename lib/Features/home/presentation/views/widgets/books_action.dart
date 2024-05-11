@@ -8,7 +8,7 @@ class BooksAction extends StatelessWidget {
     super.key,
     required this.bookModel,
   });
-  final BookModel bookModel;
+  final BookModel2 bookModel;
 
   @override
   Widget build(BuildContext context) {

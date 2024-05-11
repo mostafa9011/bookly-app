@@ -9,7 +9,7 @@ class BookDetailsView extends StatefulWidget {
     super.key,
     required this.bookModel,
   });
-  final BookModel bookModel;
+  final BookModel2 bookModel;
 
   @override
   State<BookDetailsView> createState() => _BookDetailsViewState();

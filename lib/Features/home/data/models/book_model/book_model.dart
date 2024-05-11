@@ -4,7 +4,7 @@ import 'sale_info.dart';
 import 'search_info.dart';
 import 'volume_info.dart';
 
-class BookModel extends BookEntity {
+class BookModel2 extends BookEntity {
   final String? kind;
   final String? id;
   final String? etag;
@@ -14,7 +14,7 @@ class BookModel extends BookEntity {
   final AccessInfo? accessInfo;
   final SearchInfo? searchInfo;
 
-  BookModel({
+  BookModel2({
     this.kind,
     this.id,
     this.etag,
@@ -32,7 +32,7 @@ class BookModel extends BookEntity {
           rating: 0,
         );
 
-  factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
+  factory BookModel2.fromJson(Map<String, dynamic> json) => BookModel2(
         kind: json['kind'] as String?,
         id: json['id'] as String?,
         etag: json['etag'] as String?,
@@ -62,17 +62,17 @@ class BookModel extends BookEntity {
         'searchInfo': searchInfo?.toJson(),
       };
 
-  // @override
-  // List<Object?> get props {
-  //   return [
-  //     kind,
-  //     id,
-  //     etag,
-  //     selfLink,
-  //     volumeInfo,
-  //     saleInfo,
-  //     accessInfo,
-  //     searchInfo,
-  //   ];
-  // }
+  @override
+  List<Object?> get props {
+    return [
+      kind,
+      id,
+      etag,
+      selfLink,
+      volumeInfo,
+      saleInfo,
+      accessInfo,
+      searchInfo,
+    ];
+  }
 }

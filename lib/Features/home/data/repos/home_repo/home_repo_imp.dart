@@ -14,9 +14,9 @@ class HomeRepoImp implements HomeRepo {
   });
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
+  Future<Either<Failure, List<BookModel2>>> fetchFeaturedBooks() async {
     try {
-      List<BookModel> booksList = [];
+      List<BookModel2> booksList = [];
 
       var data = await apiService.get(
         endPoint: Constants.featuredBooksEndPiont,
@@ -25,7 +25,7 @@ class HomeRepoImp implements HomeRepo {
       List<dynamic> itemList = data['items'];
       for (var element in itemList) {
         booksList.add(
-          BookModel.fromJson(element),
+          BookModel2.fromJson(element),
         );
       }
       return Right(booksList);
@@ -44,9 +44,9 @@ class HomeRepoImp implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
+  Future<Either<Failure, List<BookModel2>>> fetchNewestBooks() async {
     try {
-      List<BookModel> booksList = [];
+      List<BookModel2> booksList = [];
 
       var data = await apiService.get(
         endPoint: Constants.newestBooksEndPiont,
@@ -55,7 +55,7 @@ class HomeRepoImp implements HomeRepo {
       List<dynamic> itemList = data['items'];
       for (var element in itemList) {
         booksList.add(
-          BookModel.fromJson(element),
+          BookModel2.fromJson(element),
         );
       }
       return Right(booksList);
@@ -74,11 +74,11 @@ class HomeRepoImp implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchSimilarBooks(
+  Future<Either<Failure, List<BookModel2>>> fetchSimilarBooks(
     String categort,
   ) async {
     try {
-      List<BookModel> booksList = [];
+      List<BookModel2> booksList = [];
 
       var data = await apiService.get(
         endPoint: 'volumes?Filtering=free-ebooks&q=computer scince&Sorting=newest&Sorting=relevance',
@@ -87,7 +87,7 @@ class HomeRepoImp implements HomeRepo {
       List<dynamic> itemList = data['items'];
       for (var element in itemList) {
         booksList.add(
-          BookModel.fromJson(element),
+          BookModel2.fromJson(element),
         );
       }
       return Right(booksList);

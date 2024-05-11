@@ -4,7 +4,7 @@ import 'package:bookly/core/errors/failure.dart';
 import 'package:either_dart/either.dart';
 
 abstract class HomeRepo {
-  Future<Either<Failure, List<BookModel>>> fetchNewestBooks();
-  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
-  Future<Either<Failure, List<BookModel>>> fetchSimilarBooks(String categort);
+  Future<Either<Failure, List<BookModel2>>> fetchNewestBooks();
+  Future<Either<Failure, List<BookModel2>>> fetchFeaturedBooks();
+  Future<Either<Failure, List<BookModel2>>> fetchSimilarBooks(String categort);
 }
