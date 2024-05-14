@@ -1,10 +1,12 @@
 import 'package:bookly/Features/home/data/repos/home_repo/home_repo_imp.dart';
 import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
 import 'package:bookly/Features/home/domain/use_cases/fetch_featured_books_use_case.dart';
+import 'package:bookly/Features/home/domain/use_cases/fetch_newest_books_use_case.dart';
 import 'package:bookly/Features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly/Features/home/presentation/manager/newest_books/newest_books_cubit.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/core/utils/server_locator.dart';
+import 'package:bookly/core/utils/simple_bloc_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +19,8 @@ void main() async {
   await Hive.openBox<BookEntity>(Constants.featuredBox);
   await Hive.openBox<BookEntity>(Constants.newestBox);
   setupServerLocator();
+  Bloc.observer = SimpleBlocObserver();
+
   runApp(const Bookly());
 }
 
@@ -39,7 +43,9 @@ class Bookly extends StatelessWidget {
         BlocProvider(
           create: (context) {
             return NewestBooksCubit(
-              getIt.get<HomeRepoImp>(),
+              FetchNewestBooksUseCase(
+                getIt.get<HomeRepoImp>(),
+              ),
             )..fetchNewestBooks();
           },
         ),
