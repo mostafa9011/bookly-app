@@ -1,5 +1,6 @@
 import 'package:bookly/Features/home/data/repos/home_repo/home_repo_imp.dart';
 import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
+import 'package:bookly/Features/home/domain/use_cases/fetch_featured_books_use_case.dart';
 import 'package:bookly/Features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly/Features/home/presentation/manager/newest_books/newest_books_cubit.dart';
 import 'package:bookly/core/utils/app_router.dart';
@@ -29,7 +30,9 @@ class Bookly extends StatelessWidget {
         BlocProvider(
           create: (context) {
             return FeaturedBooksCubit(
-              getIt.get<HomeRepoImp>(),
+              FetchFeaturedBooksUseCase(
+                getIt.get<HomeRepoImp>(),
+              ),
             )..fetchFeaturedBooks();
           },
         ),
@@ -46,8 +49,9 @@ class Bookly extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: Constants.primaryColor,
-          textTheme:
-              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+          textTheme: GoogleFonts.montserratTextTheme(
+            ThemeData.dark().textTheme,
+          ),
         ),
       ),
     );

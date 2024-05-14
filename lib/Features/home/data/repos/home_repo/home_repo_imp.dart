@@ -2,10 +2,10 @@ import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
 import 'package:bookly/Features/home/data/data_sources/local_data_source/home_local_data_source.dart';
 import 'package:bookly/Features/home/data/data_sources/remote_data_source/home_remote_data_source.dart';
-import 'package:bookly/Features/home/data/repos/home_repo/home_repo.dart';
 import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
 import 'package:bookly/core/errors/failure.dart';
 import 'package:bookly/core/errors/server_failure.dart';
+import '../../../domain/repos/home_repo.dart';
 
 class HomeRepoImp extends HomeRepo {
   HomeRemoteDateSource homeRemoteDateSource;

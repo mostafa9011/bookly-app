@@ -2,13 +2,12 @@ import 'package:bookly/Features/home/data/data_sources/remote_data_source/home_r
 import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
 import 'package:bookly/core/utils/api_service.dart';
 import 'package:hive/hive.dart';
-
 import '../../../../../core/constants.dart';
 import '../../models/book_model/book_model.dart';
 
-class HomeRemoteDateSourceImpe extends HomeRemoteDateSource {
+class HomeRemoteDateSourceImp extends HomeRemoteDateSource {
   ApiService apiService;
-  HomeRemoteDateSourceImpe({
+  HomeRemoteDateSourceImp({
     required this.apiService,
   });
   @override
