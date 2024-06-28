@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-
 import 'epub.dart';
 import 'pdf.dart';
 
