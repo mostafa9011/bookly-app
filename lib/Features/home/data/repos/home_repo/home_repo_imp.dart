@@ -18,10 +18,10 @@ class HomeRepoImp extends HomeRepo {
   Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks() async {
     try {
       List<BookEntity> booksList = homeLocalDateSource.fetchFeaturedBooks();
-      if (booksList.isNotEmpty) {
+      if (booksList.isNotEmpty) {  //to get local and return .
         return Right(booksList);
       }
-      booksList = await homeRemoteDateSource.fetchFeaturedBooks();
+      booksList = await homeRemoteDateSource.fetchFeaturedBooks(); //to got remote .
 
       return Right(booksList);
     } catch (e) {

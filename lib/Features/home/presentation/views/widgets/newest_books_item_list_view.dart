@@ -1,4 +1,5 @@
 import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
+import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
@@ -10,9 +11,10 @@ import 'book_rating.dart';
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({
     super.key,
-    required this.bookModel,
+    required this.bookEntity,
   });
-  final BookModel bookModel;
+  // final BookModel bookModel;
+  final BookEntity bookEntity;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class BookListViewItem extends StatelessWidget {
       onTap: () {
         GoRouter.of(context).push(
           AppRouter.kBookDetailsView,
-          extra: bookModel,
+          extra: bookEntity,
         );
       },
       child: SizedBox(
@@ -28,7 +30,8 @@ class BookListViewItem extends StatelessWidget {
         child: Row(
           children: [
             CustomBookImage(
-              imageUrl: bookModel.volumeInfo!.imageLinks!.thumbnail!,
+              // imageUrl: bookModel.volumeInfo!.imageLinks!.thumbnail!,
+              imageUrl: bookEntity.image,
             ),
             const SizedBox(
               width: 30,
@@ -40,7 +43,8 @@ class BookListViewItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
-                      bookModel.volumeInfo!.title!,
+                      // bookModel.volumeInfo!.title!,
+                      bookEntity.title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: Styles.textStyle20.copyWith(
@@ -48,15 +52,16 @@ class BookListViewItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 3,
-                  ),
+                  // const SizedBox(
+                  //   height: 3,
+                  // ),
                   Text(
-                    bookModel.volumeInfo!.authors![0],
+                    // bookModel.volumeInfo!.authors![0],
+                    bookEntity.autherName,
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 2,
                   ),
                   Row(
                     children: [
