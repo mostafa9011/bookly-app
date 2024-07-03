@@ -10,4 +10,8 @@ abstract class Constants {
       'volumes?Filtering=free-ebooks&q=subject:programming';
   static const String newestBooksEndPiont =
       'volumes?Filtering=free-ebooks&q=computer scince&Sorting=newest';
+
+  static const String featuredBox = 'featuredBox';
+  static const String newestBox = 'newestBox';
+  static const String similarBox = 'similarBox';
 }

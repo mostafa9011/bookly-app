@@ -1,4 +1,4 @@
-import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
+import 'package:bookly/Features/home/domain/entities/book_entitiy.dart';
 import 'package:bookly/Features/home/presentation/manager/similar_books/similar_books_cubit.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/book_details_view_body.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +7,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class BookDetailsView extends StatefulWidget {
   const BookDetailsView({
     super.key,
-    required this.bookModel,
+    required this.bookEntity,
   });
-  final BookModel bookModel;
+  final BookEntity bookEntity;
 
   @override
   State<BookDetailsView> createState() => _BookDetailsViewState();
@@ -18,8 +18,7 @@ class BookDetailsView extends StatefulWidget {
 class _BookDetailsViewState extends State<BookDetailsView> {
   @override
   void initState() {
-    BlocProvider.of<SimilarBooksCubit>(context)
-        .fetchNewestBooks(widget.bookModel.volumeInfo!.authors![0]);
+    BlocProvider.of<SimilarBooksCubit>(context).fetchSimilarBooks();
     super.initState();
   }
 
@@ -28,7 +27,7 @@ class _BookDetailsViewState extends State<BookDetailsView> {
     return Scaffold(
       body: SafeArea(
         child: BookDetailsViewBody(
-          bookModel: widget.bookModel,
+          bookEntity: widget.bookEntity,
         ),
       ),
     );

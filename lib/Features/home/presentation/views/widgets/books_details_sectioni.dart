@@ -1,6 +1,6 @@
-import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
+import '../../../domain/entities/book_entitiy.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
 import 'custom_book_item.dart';
@@ -8,9 +8,9 @@ import 'custom_book_item.dart';
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({
     super.key,
-    required this.bookModel,
+    required this.bookEntity,
   });
-  final BookModel bookModel;
+  final BookEntity bookEntity;
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +23,14 @@ class BookDetailsSection extends StatelessWidget {
             horizontal: width * .2,
           ),
           child: CustomBookImage(
-            imageUrl: bookModel.volumeInfo!.imageLinks?.thumbnail ?? '',
+            imageUrl: bookEntity.image ,
           ),
         ),
         const SizedBox(
           height: 43,
         ),
         Text(
-          bookModel.volumeInfo!.title!,
+          bookEntity.title,
           style: Styles.textStyle30.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -42,7 +42,7 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            bookModel.volumeInfo!.authors![0],
+            bookEntity.autherName,
             style: Styles.textStyle18.copyWith(
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w500,
@@ -61,7 +61,7 @@ class BookDetailsSection extends StatelessWidget {
           height: 37,
         ),
         BooksAction(
-          bookModel: bookModel,
+          bookEntity: bookEntity,
         ),
       ],
     );
