@@ -1,24 +1,25 @@
-// part of 'similar_books_cubit.dart';
+part of 'similar_books_cubit.dart';
 
-// abstract class SimilarBooksState extends Equatable {
-//   const SimilarBooksState();
 
-//   @override
-//   List<Object> get props => [];
-// }
+abstract class SimilarBooksState extends Equatable {
+  const SimilarBooksState();
 
-// class SimilarBooksInitial extends SimilarBooksState {}
+  @override
+  List<Object> get props => [];
+}
 
-// class SimilarBooksLoading extends SimilarBooksState {}
+class SimilarBooksInitial extends SimilarBooksState {}
 
-// class SimilarBooksFailure extends SimilarBooksState {
-//   final String errorMessage;
+class SimilarBooksLoading extends SimilarBooksState {}
 
-//   const SimilarBooksFailure(this.errorMessage);
-// }
+class SimilarBooksFailure extends SimilarBooksState {
+  final String errorMessage;
 
-// class SimilarBooksSuccess extends SimilarBooksState {
-//   final List<BookModel> books;
+  const SimilarBooksFailure(this.errorMessage);
+}
 
-//   const SimilarBooksSuccess(this.books);
-// }
+class SimilarBooksSuccess extends SimilarBooksState {
+  final List<BookEntity> books;
+
+  const SimilarBooksSuccess(this.books);
+}

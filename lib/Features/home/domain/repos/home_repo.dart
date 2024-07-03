@@ -5,5 +5,5 @@ import 'package:either_dart/either.dart';
 abstract class HomeRepo {
   Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks();
   Future<Either<Failure, List<BookEntity>>> fetchNewestBooks();
-   Future<Either<Failure, List<BookEntity>>> fetchSimilarBooks(String categort);
+   Future<Either<Failure, List<BookEntity>>> fetchSimilarBooks();
 }

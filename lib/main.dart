@@ -18,6 +18,7 @@ void main() async {
   Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox<BookEntity>(Constants.featuredBox);
   await Hive.openBox<BookEntity>(Constants.newestBox);
+  await Hive.openBox<BookEntity>(Constants.similarBox);
   setupServerLocator();
   Bloc.observer = SimpleBlocObserver();
 

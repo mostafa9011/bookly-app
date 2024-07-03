@@ -18,10 +18,12 @@ class HomeRepoImp extends HomeRepo {
   Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks() async {
     try {
       List<BookEntity> booksList = homeLocalDateSource.fetchFeaturedBooks();
-      if (booksList.isNotEmpty) {  //to get local and return .
+      if (booksList.isNotEmpty) {
+        //to get local and return .
         return Right(booksList);
       }
-      booksList = await homeRemoteDateSource.fetchFeaturedBooks(); //to got remote .
+      booksList =
+          await homeRemoteDateSource.fetchFeaturedBooks(); //to got remote .
 
       return Right(booksList);
     } catch (e) {
@@ -63,9 +65,27 @@ class HomeRepoImp extends HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookEntity>>> fetchSimilarBooks(String categort) {
-    // TODO: implement fetchSimilarBooks
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookEntity>>> fetchSimilarBooks() async {
+    try {
+      List<BookEntity> booksList = homeLocalDateSource.fetchSimilarBooks();
+      if (booksList.isNotEmpty) {
+        return Right(booksList);
+      }
+      booksList = await homeRemoteDateSource.fetchSimilarBooks();
+
+      return Right(booksList);
+    } catch (e) {
+      if (e is DioException) {
+        return Left(
+          ServerFailure.fromDioException(e),
+        );
+      }
+      return Left(
+        ServerFailure(
+          message: e.toString(),
+        ),
+      );
+    }
   }
 }
 

@@ -45,4 +45,22 @@ class HomeRemoteDateSourceImp extends HomeRemoteDateSource {
     nBox.addAll(booksList);
     return booksList;
   }
+  
+  @override
+  Future<List<BookEntity>> fetchSimilarBooks() async {
+    var data = await apiService.get(
+      endPoint: Constants.newestBooksEndPiont,
+    );
+
+    List<dynamic> itemList = data['items'];
+    List<BookEntity> booksList = [];
+    for (var element in itemList) {
+      booksList.add(
+        BookModel.fromJson(element),
+      );
+    }
+    var sBox = Hive.box<BookEntity>(Constants.similarBox);
+    sBox.addAll(booksList);
+    return booksList;
+  }
 }

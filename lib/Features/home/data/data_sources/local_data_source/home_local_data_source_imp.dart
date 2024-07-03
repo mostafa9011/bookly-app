@@ -15,4 +15,10 @@ class HomeLocalDateSourceImp extends HomeLocalDateSource {
     var nBox = Hive.box<BookEntity>(Constants.newestBox);
     return nBox.values.toList();
   }
+
+  @override
+  List<BookEntity> fetchSimilarBooks() {
+   var nBox = Hive.box<BookEntity>(Constants.similarBox);
+    return nBox.values.toList();
+  }
 }

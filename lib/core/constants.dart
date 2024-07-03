@@ -13,4 +13,5 @@ abstract class Constants {
 
   static const String featuredBox = 'featuredBox';
   static const String newestBox = 'newestBox';
+  static const String similarBox = 'similarBox';
 }
