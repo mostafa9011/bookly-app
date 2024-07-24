@@ -98,7 +98,7 @@ To run this project locally, follow these steps:
 Contributions are welcome! Please fork this repository and submit a pull request for any enhancements or bug fixes.
 
 ## License
-This project is licensed under **the Route Academy**.
+This project is licensed under **Thrwat Thami , Google BOOKS**.
 
 ## Contact
 For any questions or support, please contact:
