@@ -51,7 +51,7 @@ class BookDetailsSection extends StatelessWidget {
               fontFamily: kFontGt,
               fontSize: 30),
           textAlign: TextAlign.center,
-          maxLines: 1,
+          maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
         const Gap(5),

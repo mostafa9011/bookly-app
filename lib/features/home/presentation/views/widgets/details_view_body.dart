@@ -26,7 +26,7 @@ class DetailsViewBody extends StatelessWidget {
             padding: const EdgeInsets.only(
               left: 30,
               right: 30,
-              bottom: 6,
+              bottom: 10,
               top: 15,
             ),
             child: Column(
@@ -50,7 +50,7 @@ class DetailsViewBody extends StatelessWidget {
                           .volumeInfo?.averageRating ??
                       0,
                 ),
-                const Gap(20),
+                const Gap(30),
                 BookPrice(
                   price: bookIndex
                       .bookModel.items![bookIndex.index].saleInfo!.saleability!,
@@ -58,7 +58,7 @@ class DetailsViewBody extends StatelessWidget {
                           .previewLink ??
                       '',
                 ),
-                const Gap(30),
+                const Gap(40),
                 Expanded(
                   child:
                       BlocBuilder<GetSimailerBooksCubit, GetSimailerBooksState>(
