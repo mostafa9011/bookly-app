@@ -136,47 +136,47 @@ To run this project locally, follow these steps:
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 250px;">
     <h3>Onboarding Screen</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/1.jpg?raw=true" alt="Onboarding 1" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-app/blob/develop/assets/screenshots/1.jpg?raw=true" alt="Onboarding 1" width="250"/>
   </div>
   <div style="flex: 1; min-width: 250px;">
     <h3>Onboarding 2</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/2.jpg?raw=true" alt="Onboarding 2" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/2.jpg?raw=true" alt="Onboarding 2" width="250"/>
   </div>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 250px;">
     <h3>Loading</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/3.jpg?raw=true" alt="Loading" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/3.jpg?raw=true" alt="Loading" width="250"/>
   </div>
   <div style="flex: 1; min-width: 250px;">
     <h3>Home Screen</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/4.jpg?raw=true" alt="Home Screen" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/4.jpg?raw=true" alt="Home Screen" width="250"/>
   </div>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 250px;">
     <h3>Details Screen</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/5.jpg?raw=true" alt="Details Screen" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/5.jpg?raw=true" alt="Details Screen" width="250"/>
   </div>
   <div style="flex: 1; min-width: 250px;">
     <h3>Drawer</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/6.jpg?raw=true" alt="Drawer" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/6.jpg?raw=true" alt="Drawer" width="250"/>
   </div>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 250px;">
     <h3>Search Screen</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/7.jpg?raw=true" alt="Search Screen" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/7.jpg?raw=true" alt="Search Screen" width="250"/>
   </div>
   <div style="flex: 1; min-width: 250px;">
     <h3>Settings</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/8.jpg?raw=true" alt="Home Screen" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/8.jpg?raw=true" alt="Home Screen" width="250"/>
   </div>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 250px;">
     <h3>Borowse</h3>
-    <img src="https://github.com/mostafa9011/bookly-App/blob/main/assets/screeenshots/9.jpg?raw=true" alt="Borowse" width="250"/>
+    <img src="https://github.com/mostafa9011/bookly-App/blob/develop/assets/screeenshots/9.jpg?raw=true" alt="Borowse" width="250"/>
   </div>
 </div>
 
